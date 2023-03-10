@@ -34,6 +34,7 @@
     --footer-text-color: #E7E9FC;
     --button-text-hover-color: #ffffff;
     --light-mode-backgrounds: #F4F4FD;
+    --footer-icons-social-buttons:rgba(255, 255, 255, 0.1);
 
   
 }
@@ -112,6 +113,10 @@ padding-right: 12px;
 
 /* footer/ */
 .footer a {text-decoration: none; }
+.footer-flex-container {
+    display: flex;
+}
+
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -133,7 +138,40 @@ padding-right: 12px;
 .logo-footer>span {color: var(--footer-text-color);}
 .footer-flex {
     width: 264px;
-    /* display: flex; */
+    margin-right:120px;
+}
+.social-media-container>p {
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: var(--button-text-hover-color);
+}
+.social-media-list {
+    padding-left: 0;
+    list-style: none;
+    margin:0;
+    display: flex;
+}
+.social-media-list>li:not(:last-child) {
+    margin-right: 16px;
+
+}
+.footer-social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* background-image: linear-gradient(to right, var(--footer-icons-social-buttons), var(--footer-icons-social-buttons)  ); */
+    background-color: var(--footer-icons-social-buttons);
+    border-radius: 50%;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+.footer-social-icon:hover,.footer-social-icon:focus {
+    background-color: var(--success-valid-fields-color);
+    
+}
+.footer-icon-svg {
+    width:24px;
+    height:24px;
 }
 
 /* main */
@@ -212,21 +250,16 @@ padding-right: 12px;
     justify-content: space-between;}
     
 .features-flex> li:not(:last-child) { margin-right:24px;}
-
+/* 
 .features-item::before {
     display: block;
     content: '';
     height: 112px;
-    /* outline: 1px solid red; */
-    /* background-image: url(../images/antenna-min.svg);
-    background-repeat: no-repeat; */
-    /* background-size: contain; */
-    /* background-position: center; */
     background-color: var(--light-mode-backgrounds);
     margin-bottom: 8px;
+} */
 
-}
-.features-item:nth-child(1)::before {
+/* .features-item:nth-child(1)::before {
     background-image: url(../images/antenna-min.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -245,6 +278,17 @@ padding-right: 12px;
     background-image: url(../images/astronaut-min.svg);
     background-repeat: no-repeat;
     background-position: center;
+} */
+.features-svg-container {
+    height: 112px;;
+    background-color: var(--light-mode-backgrounds);
+    padding-left: 100px;
+    padding-top: 24px;
+    margin-bottom: 8px;
+}
+.features-svg {
+    height: 64px;
+    width: 64px ;
 }
 
 
@@ -324,15 +368,18 @@ margin-bottom: 0;}
 .team {
     background-color: var(--light-mode-backgrounds);
     }
-.team ul {list-style: none;
+/* .team ul {list-style: none;
     margin-top: 0;
-    margin-bottom: 0;}
+    margin-bottom: 0;} */
 
 .team-flex {
+    list-style: none;
     display: flex;
     justify-content: space-between;
     padding-left: 0px;
-    gap: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* gap: 24px; */
 
 }
 .team-text-container {
@@ -341,7 +388,7 @@ margin-bottom: 0;}
 }
 .social-icons-team {
     list-style: none;
-    margin: 0;
+    margin-top: 8px;
     padding-left: 16px;
     padding-right: 16px;
 
