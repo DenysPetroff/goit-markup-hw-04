@@ -277,10 +277,6 @@ text-align: center;
     align-items: center;
     justify-content: center;
 }
-.features-svg {
-    /* height: 64px;
-    width: 64px ; */
-}
 
 
 
@@ -394,10 +390,7 @@ margin-bottom: 0;}
 .button-soc:hover,.button-soc:focus { 
     background-color: var(--pressed-hover-button-color);
 }
-.icon-soc {
-    
-    
-}
+
 
 /* CUSTOMERS  */
 .customers.section {padding-top: 130px; ;}
